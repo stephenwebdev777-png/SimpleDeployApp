@@ -4,7 +4,12 @@ files:
   - source: index.html
     destination: /home/ubuntu/SimpleDeployApp
 hooks:
+  BeforeInstall:
+    - location: scripts/clean_old_files.sh
+      timeout: 300
+      runas: ubuntu
   AfterInstall:
     - location: scripts/after_install.sh
       timeout: 300
       runas: ubuntu
+
