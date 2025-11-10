@@ -1,2 +1,5 @@
 #!/bin/bash
-echo "Deployment finished at $(date)" >> /home/ubuntu/SimpleDeployApp/deploy.log
+sudo cp /home/ubuntu/SimpleDeployApp/index.html /var/www/html/index.html
+sudo systemctl restart nginx || true
+echo "Deployed new index.html successfully!"
+
