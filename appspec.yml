@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: index.html
+    destination: /home/ubuntu/SimpleDeployApp
+hooks:
+  AfterInstall:
+    - location: scripts/after_install.sh
+      timeout: 300
+      runas: ubuntu
