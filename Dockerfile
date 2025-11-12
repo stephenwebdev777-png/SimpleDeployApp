@@ -1,8 +1,3 @@
-# Use official Nginx image
-FROM nginx:latest
-
-# Copy only website files
-COPY website/ /usr/share/nginx/html
-
-# Expose port 80
+FROM public.ecr.aws/nginx/nginx:latest
+COPY . /usr/share/nginx/html
 EXPOSE 80
